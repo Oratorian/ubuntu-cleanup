@@ -12,13 +12,12 @@ do
 > $i
 done
 
-#Getting rid of partial packages
-apt-get clean && apt-get autoclean
-apt-get remove --purge -y software-properties-common
-
 #Update System and getting rid of no longer required packages
 apt update && apt full-upgrade -y && apt --purge autoremove -y 
 
+#Getting rid of partial packages
+apt-get clean && apt-get autoclean
+apt-get remove --purge -y software-properties-common
 
 #Getting rid of orphaned packages
 deborphan | xargs sudo apt-get -y remove --purge
