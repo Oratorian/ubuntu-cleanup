@@ -4,8 +4,7 @@
 du -sh /var/cache/apt/archives
 
 #Clean all the log file
-#for logs in `find /var/log -type f`;  do > $logs; done
-
+for logs in `find /var/log -type f`;  do > $logs; done
 logs=`find /var/log -type f`
 for i in $logs
 do
