@@ -1,10 +1,10 @@
 [
   { 
     "ShortName": "aurorafront", 
-    "DisplayName": "Aurora Frontend Server" 
+    "DisplayName": "Aurora Frontend Server [Test]" 
   },
   { 
     "ShortName": "devops",
-    "DisplayName": "DevOps RDP Server" 
+    "DisplayName": "DevOps RDP Server [Test]" 
   }
 ]
