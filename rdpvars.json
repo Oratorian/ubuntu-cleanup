@@ -1,4 +1,10 @@
 [
-  { "ShortName": "aurorafront", "DisplayName": "Aurora Frontend Server" },
-  { "ShortName": "devops",      "DisplayName": "DevOps RDP Server" }
+  { 
+    "ShortName": "aurorafront", 
+    "DisplayName": "Aurora Frontend Server" 
+  },
+  { 
+    "ShortName": "devops",
+    "DisplayName": "DevOps RDP Server" 
+  }
 ]
