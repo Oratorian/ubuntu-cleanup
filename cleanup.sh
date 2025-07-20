@@ -7,7 +7,10 @@ du -sh /var/cache/apt/archives
 #for logs in `find /var/log -type f`;  do > $logs; done
 
 logs=`find /var/log -type f`
-for i in $logs; do > $i done
+for i in $logs
+do
+> $i
+done
 
 #Update System and getting rid of no longer required packages
 apt update && apt full-upgrade --purge --autoremove -y
