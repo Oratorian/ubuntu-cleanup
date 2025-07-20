@@ -7,10 +7,10 @@ du -sh /var/cache/apt/archives
 #for logs in `find /var/log -type f`;  do > $logs; done
 
 logs=`find /var/log -type f`
-for i in $logs; do > $i; done
+for i in $logs; do > $i done
 
 #Update System and getting rid of no longer required packages
-apt update && apt full-upgrade --purge --autoremove -y 
+apt update && apt full-upgrade --purge --autoremove -y
 
 #Getting rid of partial packages
 apt-get clean && apt-get autoclean
@@ -27,7 +27,7 @@ rm -rf /home/*/.local/share/Trash/*/**
 rm -rf /root/.local/share/Trash/*/**
 
 # Remove Man
-rm -rf /usr/share/man/?? 
+rm -rf /usr/share/man/??
 rm -rf /usr/share/man/??_*
 
 #Delete all .gz and rotated file
@@ -42,7 +42,7 @@ apt-get purge --autoremove $(dpkg -l 'linux-*' | sed '/^ii/!d;/'"$(uname -r | se
 apt-get install linux-headers-`uname -r|cut -d'-' -f3`-`uname -r|cut -d'-' -f4`
 
 #Another purge and autoremove
-apt --purge autoremove -y 
+apt --purge autoremove -y
 
 #Cleaning is completed
 echo "Cleaning is completed"
