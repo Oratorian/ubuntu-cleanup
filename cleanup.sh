@@ -20,7 +20,7 @@ apt-get clean && apt-get autoclean
 apt-get remove --autoremove --purge -y software-properties-common
 
 #Getting rid of orphaned packages
-deborphan | xargs sudo apt-get -y remove --purge --autoremove
+deborphan --keep-file /etc/deborphan/keep | xargs sudo apt-get -y remove --purge --autoremove
 
 #Free up space by clean out the cached packages
 apt-get clean
